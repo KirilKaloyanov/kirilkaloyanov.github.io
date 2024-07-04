@@ -272,6 +272,12 @@ article > a:visited {
   max-width: 780px;
 }
 
+@media screen and (min-width: 800px) {
+  .diploma-image {
+    border: 5vw solid #234465;
+  }
+}
+
 .diploma-slide {
   transition: all 1s;
   transform: translate(-50%);
