@@ -57,10 +57,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: white;
-}
-
 a:hover {
   text-decoration: underline;
 }
@@ -140,7 +136,11 @@ a:hover {
   background-color: var(--navy-blue);
 }
 
-.poppins-light > a {
+.contact-item > .poppins-light > a {
+  color: white;
+}
+
+.contact-item > .poppins-light > a:visited {
   color: white;
 }
 
