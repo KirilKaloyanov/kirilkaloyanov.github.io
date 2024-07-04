@@ -9,20 +9,22 @@ const scrollPosition = {
 };
 
 openDiplomaBtn.addEventListener("click", () => {
-  diploma.classList.remove("display-hidden");
   diplomaImage.classList.add("diploma-slide");
+  diploma.classList.remove("display-hidden");
 
   scrollPosition.y = window.scrollY;
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
 closeDiplomaBtn.addEventListener("click", () => {
-  diploma.classList.add("display-hidden");
   diplomaImage.classList.remove("diploma-slide");
+  diploma.classList.add("display-hidden");
 
-  window.scrollTo({
-    top: scrollPosition.y,
-    left: scrollPosition.x,
-    behavior: "smooth",
-  });
+  if (scrollPosition.y > window.scrollY) {
+    window.scrollTo({
+      top: scrollPosition.y,
+      left: scrollPosition.x,
+      behavior: "smooth",
+    });
+  }
 });
