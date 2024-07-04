@@ -17,8 +17,8 @@ openDiplomaBtn.addEventListener("click", () => {
 });
 
 closeDiplomaBtn.addEventListener("click", () => {
-  diplomaImage.classList.remove("diploma-slide");
   diploma.classList.add("display-hidden");
+  diplomaImage.classList.remove("diploma-slide");
 
   window.scrollTo({
     top: scrollPosition.y,
