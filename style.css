@@ -483,3 +483,7 @@ article > a:visited {
 .close-btn::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+.image {
+  width: 100%;
+}
