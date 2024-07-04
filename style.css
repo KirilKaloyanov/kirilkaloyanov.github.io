@@ -61,6 +61,38 @@ a:hover {
   text-decoration: underline;
 }
 
+.thick-padding {
+  padding: 40px 40px 20px 40px;
+}
+
+.thin-padding {
+  padding: 20px 40px;
+}
+
+.right-padding {
+  padding: 20px 0 20px 40px;
+}
+
+@media screen and (min-width: 501px) and (max-width: 864px) {
+  .thick-padding {
+    padding: 20px 40px 0px 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .thick-padding {
+    padding: 40px 40px 20px 10px;
+  }
+
+  .thin-padding {
+    padding: 20px 10px;
+  }
+
+  .right-padding {
+    padding: 20px 0 20px 10px;
+  }
+}
+
 /* HEADER */
 
 .header-main {
@@ -156,18 +188,6 @@ a:hover {
   gap: 10px;
 }
 
-.thick-padding {
-  padding: 40px 40px 20px 40px;
-}
-
-.thin-padding {
-  padding: 20px 40px;
-}
-
-.right-padding {
-  padding: 20px 0 20px 40px;
-}
-
 /* MAIN CONTENT */
 
 main {
@@ -179,10 +199,6 @@ main {
   main {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-  }
-
-  .thick-padding {
-    padding: 20px 40px 0px 40px;
   }
 }
 
@@ -259,6 +275,7 @@ article > a:visited {
 }
 
 .badge-container {
+  padding: 0;
   display: flex;
   justify-content: space-around;
 }
