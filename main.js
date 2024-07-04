@@ -15,7 +15,7 @@ openDiplomaBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   setTimeout(() => {
     diplomaContainer.style.visibility = "visible";
-  }, 500);
+  }, 1000);
 
   diplomaImage.classList.add("diploma-slide");
   diploma.classList.remove("display-hidden");
