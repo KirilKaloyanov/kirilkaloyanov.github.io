@@ -245,6 +245,7 @@ article > a:visited {
 
 .diploma {
   position: relative;
+  background-color: pink;
 }
 
 .display-none {
@@ -252,7 +253,7 @@ article > a:visited {
   visibility: hidden;
 }
 
-.diploma-container {
+/* .diploma-container {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -260,11 +261,11 @@ article > a:visited {
   width: 100%;
   background-color: #234465;
   opacity: 65%;
-}
+} */
 
 .diploma-image {
   position: absolute;
-  z-index: 2;
+  /* z-index: 2; */
   left: 50%;
   transform: translate(50%);
   transition: all 1s;
@@ -284,8 +285,8 @@ article > a:visited {
 }
 
 .close-btn {
-  z-index: 3;
-  position: fixed;
+  /* z-index: 3; */
+  position: absolute;
   top: 0;
   left: 90%;
   width: 32px; /* Set the desired width of the X sign */
