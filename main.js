@@ -13,11 +13,7 @@ openDiplomaBtn.addEventListener("click", () => {
   diplomaImage.classList.add("diploma-slide");
 
   scrollPosition.y = window.scrollY;
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    // behavior: "smooth",
-  });
+  window.scrollTo(0, 0);
 });
 
 closeDiplomaBtn.addEventListener("click", () => {
