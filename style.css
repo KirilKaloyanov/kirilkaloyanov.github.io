@@ -94,7 +94,7 @@ a:hover {
   opacity: 60%;
   border-radius: 50%;
   border: 5px solid var(--cyan-color);
-  background-image: url(/coverCircle.jpg);
+  /* background-image: url(/coverCircle.jpg); Such style is applied in the markup */
   background-size: cover;
   background-position: center;
   margin: 20px;
