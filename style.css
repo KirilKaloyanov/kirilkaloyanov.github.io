@@ -324,7 +324,7 @@ article > a:visited {
   }
 }
 
-@media screen and (min-width: 864px) and (max-width: 1099px) {
+@media screen and (min-width: 865px) and (max-width: 1099px) {
   .soft-skills {
     flex-direction: column;
   }
