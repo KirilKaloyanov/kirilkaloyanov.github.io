@@ -23,7 +23,10 @@ openDiplomaBtn.addEventListener("click", () => {
   diploma.classList.remove("display-hidden");
 });
 
-closeDiplomaBtn.addEventListener("click", () => {
+closeDiplomaBtn.addEventListener("click", hideModal);
+diplomaContainer.addEventListener("click", hideModal);
+
+function hideModal() {
   diplomaContainer.style.visibility = "hidden";
   diplomaImage.classList.remove("diploma-slide");
   diploma.classList.add("display-hidden");
@@ -35,7 +38,7 @@ closeDiplomaBtn.addEventListener("click", () => {
       behavior: "smooth",
     });
   }
-});
+}
 
 function getDocumentHeight() {
   const body = document.body;
