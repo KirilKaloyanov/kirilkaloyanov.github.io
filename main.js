@@ -9,11 +9,11 @@ const scrollPosition = {
 };
 
 openDiplomaBtn.addEventListener("click", () => {
-  diplomaImage.classList.add("diploma-slide");
-  diploma.classList.remove("display-hidden");
-
   scrollPosition.y = window.scrollY;
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+  diplomaImage.classList.add("diploma-slide");
+  diploma.classList.remove("display-hidden");
 });
 
 closeDiplomaBtn.addEventListener("click", () => {
