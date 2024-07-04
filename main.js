@@ -16,7 +16,6 @@ openDiplomaBtn.addEventListener("click", () => {
   setTimeout(() => {
     diplomaContainer.style.visibility = "visible";
     diplomaContainer.style.height = `${getDocumentHeight()}px`;
-    console.log(diplomaContainer.style.height);
   }, 1000);
 
   diplomaImage.classList.add("diploma-slide");
