@@ -254,10 +254,10 @@ article > a:visited {
 }
 
 .diploma-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background-color: #234465;
   opacity: 65%;

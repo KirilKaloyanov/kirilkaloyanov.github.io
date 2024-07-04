@@ -15,6 +15,8 @@ openDiplomaBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   setTimeout(() => {
     diplomaContainer.style.visibility = "visible";
+    diplomaContainer.style.height = `${getDocumentHeight()}px`;
+    console.log(diplomaContainer.style.height);
   }, 1000);
 
   diplomaImage.classList.add("diploma-slide");
@@ -34,3 +36,16 @@ closeDiplomaBtn.addEventListener("click", () => {
     });
   }
 });
+
+function getDocumentHeight() {
+  const body = document.body;
+  const html = document.documentElement;
+
+  return Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+}
