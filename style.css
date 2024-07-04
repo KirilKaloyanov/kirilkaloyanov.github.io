@@ -281,7 +281,7 @@ article > a:visited {
   z-index: 3;
   position: fixed;
   top: 0;
-  left: 95%;
+  left: 90%;
   width: 32px; /* Set the desired width of the X sign */
   height: 32px; /* Set the desired height of the X sign */
   cursor: pointer;
