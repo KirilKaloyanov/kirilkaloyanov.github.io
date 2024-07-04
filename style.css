@@ -303,13 +303,13 @@ article > a:visited {
 
 @media screen and (max-width: 555px) {
   .soft-skills {
-    display: block;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 864px) and (max-width: 1099px) {
   .soft-skills {
-    display: block;
+    flex-direction: column;
   }
 }
 
