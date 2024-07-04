@@ -15,7 +15,13 @@
     <title>Kiril Kaloyanov - Resume</title>
   </head>
   <body>
-    <header>
+    <div class="diploma display-none" id="diploma">
+      <div class="diploma-container"></div>
+      <img src="diploma.jpg" class="diploma-image" id="diploma-image" />
+      <div class="close-btn" id="hide-diploma"></div>
+    </div>
+
+    <header class="global-width">
       <div class="header-main bg-dark-blue lato-light thick-padding">
         <div class="header-text">
           <p class="header-title">Kiril Kaloyanov</p>
@@ -64,7 +70,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="global-width">
       <div>
         <section class="thick-padding">
           <div class="section-title lato-light">
@@ -159,11 +165,16 @@
               </ul>
             </div>
             <br />
+            <button id="view-diploma" class="diplomaBtn lato-light">
+              View Diploma
+            </button>
+            &nbsp;
             <a
               href="https://softuni.bg/Certificates/Details/215931/25341b48"
               target="_blank"
               class="poppins-light"
-              >Link to diploma for professional qulification from SoftUni</a
+            >
+              Link&nbsp;to&nbsp;diploma&nbsp;at&nbsp;softuni.bg</a
             >
           </article>
           <article>
@@ -203,7 +214,8 @@
               part of an EU project. Initially, the application was built using
               React, Express, and MongoDB. Upon project completion, I
               successfully rewrote it using Custom HTML elements to enhance
-              performance and visibility. Deployed at a Heroku eco dyno. Domain at Superhosting.
+              performance and visibility. Deployed at a Heroku eco dyno. Domain
+              at Superhosting.
             </div>
             <a
               href="http://www.bgcyclingplan.eu"
@@ -217,7 +229,9 @@
             <div class="article-title">Vila Ortsevo</div>
             <div class="poppins-light">
               A simple information page about a small guesthouse in Ortsevo the
-              highest village in Bulgaria. It is written in React and uses a weather api and leaflet.js. Deployed at GitHub Pages. Domain at Porkbun.
+              highest village in Bulgaria. It is written in React and uses a
+              weather api and leaflet.js. Deployed at GitHub Pages. Domain at
+              Porkbun.
             </div>
             <a
               href="http://www.vilaortsevo.com"
@@ -230,4 +244,5 @@
       </div>
     </main>
   </body>
+  <script src="main.js"></script>
 </html>

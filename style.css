@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .lato-light {
   font-family: "Lato", sans-serif;
@@ -14,10 +14,15 @@
 
 :root {
   --cyan-color: #449399;
+  --blue-color: #313c4e;
   --navy-blue: #222a33;
 }
 
 body {
+  margin: 0;
+}
+
+.global-width {
   margin: 0 auto;
   max-width: 1100px;
 }
@@ -40,14 +45,14 @@ a:hover {
 
 /* HEADER */
 
-.header-main{
+.header-main {
   color: white;
   display: flex;
   justify-content: space-between;
 }
 
 .bg-dark-blue {
-  background-color: #313c4e;
+  background-color: var(--blue-color);
 }
 
 .header-text {
@@ -77,8 +82,7 @@ a:hover {
   margin: 20px;
 }
 
-
-@media screen and (max-width:864px){
+@media screen and (max-width: 864px) {
   .header-image {
     transform: scale(0);
     transition: all 0.3s;
@@ -89,7 +93,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width:864px){
+@media screen and (min-width: 864px) {
   .header-image {
     transform: scale(1);
     transition: all 0.1s;
@@ -100,7 +104,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width: 450px) {
   .header-image {
     display: none;
   }
@@ -118,8 +122,8 @@ a:hover {
   color: white;
 }
 
-@media screen and (max-width:864px) {
-  .flex-direction-col{
+@media screen and (max-width: 864px) {
+  .flex-direction-col {
     flex-direction: column;
     gap: 20px;
   }
@@ -155,7 +159,6 @@ main {
     padding: 20px 40px 0px 40px;
   }
 }
-
 
 .section-title {
   color: var(--cyan-color);
@@ -216,6 +219,19 @@ article > a:visited {
   color: var(--cyan-color);
 }
 
+.diplomaBtn {
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5spx;
+  padding: 9px 12px;
+  background-color: var(--blue-color);
+  cursor: pointer;
+}
+
 .badge {
   display: inline-block;
   color: white;
@@ -223,4 +239,69 @@ article > a:visited {
   padding: 7px;
   margin: 5px;
   border-radius: 5px;
+}
+
+/* DIPLOMA */
+
+.diploma {
+  position: relative;
+}
+
+.display-none {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.diploma-container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: #234465;
+  opacity: 65%;
+}
+
+.diploma-image {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(50%);
+  transition: all 1s;
+  width: 100%;
+  max-width: 780px;
+}
+
+.diploma-slide {
+  transition: all 1s;
+  transform: translate(-50%);
+}
+
+.close-btn {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 95%;
+  width: 32px; /* Set the desired width of the X sign */
+  height: 32px; /* Set the desired height of the X sign */
+  cursor: pointer;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 5px;
+  background-color: #cfcfcf; /* Set the desired color of the X sign */
+}
+
+.close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
