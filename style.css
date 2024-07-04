@@ -293,7 +293,7 @@ article > a:visited {
 }
 
 .hard-skills > span {
-  border-radius: 50%;
+  border-radius: 8%;
 }
 
 .soft-skills {
@@ -314,7 +314,7 @@ article > a:visited {
 }
 
 .soft-skills > span {
-  border-radius: 8%;
+  border-radius: 50%;
   background-color: var(--cyan-color);
   color: white;
   border: 1px solid grey;
