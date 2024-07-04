@@ -9,16 +9,16 @@ const scrollPosition = {
 };
 
 openDiplomaBtn.addEventListener("click", () => {
-  diploma.classList.remove("display-none");
+  diploma.classList.remove("display-hidden");
   diplomaImage.classList.add("diploma-slide");
 
   scrollPosition.y = window.scrollY;
-  window.scrollTo({ top: 0, left: 0 });
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
 closeDiplomaBtn.addEventListener("click", () => {
   diplomaImage.classList.remove("diploma-slide");
-  diploma.classList.add("display-none");
+  diploma.classList.add("display-hidden");
 
   window.scrollTo({
     top: scrollPosition.y,
