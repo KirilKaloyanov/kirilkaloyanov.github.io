@@ -246,7 +246,6 @@ article > a:visited {
 .diploma {
   position: relative;
   background-color: pink;
-  visibility: visible;
 }
 
 .display-hidden {
@@ -266,7 +265,7 @@ article > a:visited {
 
 .diploma-image {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   left: 50%;
   transform: translate(50%);
   transition: all 1s;
@@ -286,7 +285,7 @@ article > a:visited {
 }
 
 .close-btn {
-  z-index: 3;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 90%;
