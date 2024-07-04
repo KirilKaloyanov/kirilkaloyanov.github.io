@@ -398,7 +398,7 @@ article > a:visited {
 }
 
 .bg-java {
-  background: linear-gradient(1deg, var(--java-1), var(--java-2) 55%);
+  background: linear-gradient(1deg, var(--java-1), var(--java-2) 55%, white);
   color: white;
   font-size: 1.8rem;
 }
