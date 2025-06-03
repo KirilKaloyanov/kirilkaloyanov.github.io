@@ -27,15 +27,17 @@
   --js: #f0db4f;
   --react: #66dbfb;
   --angular: #de0837;
-  --vue1: #41b883;
-  --vue2: #243d55;
+  --next1:#000000;
+  --next2:#ffffff;
+  /* --vue1: #41b883;
+  --vue2: #243d55; */
   --node: #94c747;
   --java-1: #158ec9;
   --java-2: #ed272c;
   --spring: #72b545;
   --git: #f15639;
   --bootstrap: #7818f7;
-  --heroku: #740097;
+  --tailwind: #00bcff;
   --sql1: #01758f;
   --sql2: #f29111;
 }
@@ -382,18 +384,23 @@ article > a:visited {
 
 .bg-angular {
   background-color: var(--angular);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
-.bg-vue {
-  background-color: var(--vue1);
-  color: var(--vue2);
-  font-size: 1.6rem;
+.bg-next {
+  background-color: var(--next1);
+  color: var(--next2);
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.bg-next span {
+  transform: scaleX(1.4);
 }
 
 .bg-node {
   background-color: var(--node);
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: black;
 }
 
@@ -424,9 +431,9 @@ article > a:visited {
   font-size: 1.6rem;
 }
 
-.bg-heroku {
-  background-color: var(--heroku);
-  font-size: 1rem;
+.bg-tailwind {
+  background-color: var(--tailwind);
+  font-size: 1.6rem;
 }
 
 /* DIPLOMA */
