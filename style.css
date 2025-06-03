@@ -251,7 +251,7 @@ ul {
   color: var(--cyan-color);
 }
 
-article > a {
+a {
   color: var(--cyan-color);
 }
 
@@ -510,4 +510,10 @@ article > a:visited {
 
 .image {
   width: 100%;
+}
+
+.image_certificate {
+  padding-top: 30px;
+  width: 50%;
+  max-width: 750px;
 }
