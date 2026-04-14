@@ -24,6 +24,8 @@
   --navy-blue: #222a33;
   --html1: #e34f26;
   --html2: #006bc0;
+  --rxjs1: #502888;
+  --rxjs2: #ed038f;
   --js: #f0db4f;
   --react: #66dbfb;
   --angular: #de0837;
@@ -415,8 +417,10 @@ article > a:visited {
   font-size: 1.5rem;
 }
 
-.bg-bs {
-  background-color: var(--bootstrap);
+.bg-rxjs {
+  background: linear-gradient(130deg, var(--rxjs1) 40%, var(--rxjs2));
+  color: white;
+  font-size: 1.2rem;
 }
 
 .bg-sql {
