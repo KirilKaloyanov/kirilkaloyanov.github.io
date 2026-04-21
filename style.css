@@ -311,6 +311,7 @@ article > a:visited {
 @media print {
   .badge-container {
     display: block;
+    break-inside: avoid;
   }
 }
 
