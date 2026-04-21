@@ -199,6 +199,12 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+@media print {
+  main {
+    grid-template-columns: 50% 50%;
+  }
+}
+
 @media screen and (max-width: 864px) {
   main {
     grid-template-columns: 1fr;
@@ -278,6 +284,12 @@ article > a:visited {
   cursor: pointer;
 }
 
+@media print {
+  #view-diploma {
+    display: none;
+  }
+}
+
 .badge-container {
   padding: 0;
   display: flex;
@@ -291,6 +303,12 @@ article > a:visited {
 }
 
 @media screen and (min-width: 555px) and (max-width: 864px) {
+  .badge-container {
+    display: block;
+  }
+}
+
+@media print {
   .badge-container {
     display: block;
   }
