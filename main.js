@@ -51,3 +51,24 @@ function getDocumentHeight() {
     html.offsetHeight
   );
 }
+
+document.getElementById("downloadPdf").addEventListener("click", downloadCV);
+
+async function downloadCV() {
+    const response = await fetch('https://cv-pdf-service-173955335103.europe-north1.run.app/generate-pdf', {
+        method: 'GET', // или POST, ако решиш да пращаш данни
+    });
+
+    if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Kiril_Kaloyanov_CV.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    } else {
+        console.error('Error while generatingPDF');
+    }
+}

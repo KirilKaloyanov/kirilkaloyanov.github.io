@@ -271,7 +271,7 @@ article > a:visited {
   color: var(--cyan-color);
 }
 
-.diplomaBtn {
+.styledBtn {
   border: 0;
   border-radius: 5px;
   color: white;
@@ -284,8 +284,16 @@ article > a:visited {
   cursor: pointer;
 }
 
+.blueBtn {
+  background-color: var(--blue-color);
+}
+
+.orangeBtn {
+  background-color: var(--git);
+}
+
 @media print {
-  #view-diploma {
+  #view-diploma, #downloadPdf {
     display: none;
   }
 }
@@ -529,6 +537,18 @@ article > a:visited {
 
 .close-btn::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.downloadPdfContainer {
+  position: relative;
+}
+
+#downloadPdf {
+  position: fixed; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1;
 }
 
 .image {
