@@ -56,7 +56,7 @@ function getDocumentHeight() {
 document.getElementById("download-pdf").addEventListener("click", downloadCV);
 
 async function downloadCV() {
-  console.log('1 click')'
+  console.log('1 click');
   downloadBtn.classList.remove("organgeBtn");
   downloadBtn.classList.add("greyBtn");
   downloadBtn.disabled = true;
