@@ -3,6 +3,7 @@ const diplomaContainer = document.getElementById("diploma-container");
 const diplomaImage = document.getElementById("diploma-image");
 const openDiplomaBtn = document.getElementById("view-diploma");
 const closeDiplomaBtn = document.getElementById("hide-diploma");
+const downloadBtn = document.getElementById("download-pdf");
 
 const scrollPosition = {
   x: window.scrollX,
@@ -55,8 +56,11 @@ function getDocumentHeight() {
 document.getElementById("downloadPdf").addEventListener("click", downloadCV);
 
 async function downloadCV() {
+  downloadBtn.classList.remove("organgeBtn");
+  downloadBtn.classList.add("greyBtn");
+  downloadBtn.disabled = true;
     const response = await fetch('https://cv-pdf-service-173955335103.europe-north1.run.app/generate-pdf', {
-        method: 'GET', // или POST, ако решиш да пращаш данни
+        method: 'GET', 
     });
 
     if (response.ok) {
@@ -71,4 +75,7 @@ async function downloadCV() {
     } else {
         console.error('Error while generatingPDF');
     }
+  downloadBtn.classList.add("organgeBtn");
+  downloadBtn.classList.remove("greyBtn");
+  downloadBtn.disabled = false;
 }
