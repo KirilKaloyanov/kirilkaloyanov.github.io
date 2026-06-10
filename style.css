@@ -292,6 +292,10 @@ article > a:visited {
   background-color: var(--git);
 }
 
+.greyBtn {
+  background-color: #393d36;
+}
+
 @media print {
   #view-diploma, #downloadPdf {
     display: none;
@@ -543,7 +547,7 @@ article > a:visited {
   position: relative;
 }
 
-#downloadPdf {
+#download-pdf {
   position: fixed; 
   bottom: 20px; 
   left: 50%; 
