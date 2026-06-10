@@ -53,7 +53,7 @@ function getDocumentHeight() {
   );
 }
 
-document.getElementById("downloadPdf").addEventListener("click", downloadCV);
+document.getElementById("download-pdf").addEventListener("click", downloadCV);
 
 async function downloadCV() {
   console.log('1 click')'
