@@ -56,14 +56,13 @@ function getDocumentHeight() {
 document.getElementById("download-pdf").addEventListener("click", downloadCV);
 
 async function downloadCV() {
-  console.log('1 click');
   downloadBtn.classList.remove("organgeBtn");
   downloadBtn.classList.add("greyBtn");
   downloadBtn.disabled = true;
     const response = await fetch('https://cv-pdf-service-173955335103.europe-north1.run.app/generate-pdf', {
         method: 'GET', 
     });
-console.log(response.ok)
+
     if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
