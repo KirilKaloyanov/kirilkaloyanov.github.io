@@ -59,22 +59,38 @@ async function downloadCV() {
   downloadBtn.classList.remove("organgeBtn");
   downloadBtn.classList.add("greyBtn");
   downloadBtn.disabled = true;
+
+  let iteration = 1;
+  const btnText = 'Downloading';
+  const dotInterval = setInterval(() => {
+    const dots = '.'.repeat(iteration);
+    downloadBtn.textContent = btnText + dots;
+    iteration++;
+    if (iteration == 4) iteration = 1;
+  }, 500);
+
+  try {
     const response = await fetch('https://cv-pdf-service-173955335103.europe-north1.run.app/generate-pdf', {
         method: 'GET', 
     });
 
     if (response.ok) {
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Kiril_Kaloyanov_CV.pdf';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-    } else {
-        console.error('Error while generatingPDF');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Kiril_Kaloyanov_CV.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
     }
+  } catch(error) {
+    alert("We could not prepare the PDF. Please use Ctrl+P instead.");
+  }
+  
+  clearInterval(dotInterval);
+  downloadBtn.textContent = "Download PDF";
   downloadBtn.classList.add("organgeBtn");
   downloadBtn.classList.remove("greyBtn");
   downloadBtn.disabled = false;
